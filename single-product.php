@@ -5,7 +5,7 @@
     <main class="main">
       <section class="hero">
         <div class="hero__container">
-          <div class="hero__background" style="background-image: url(assets/img/single-product-hero.webp)"></div>
+          <div class="hero__background" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/single-product-hero.webp'; ?>');"></div>
 
           <div class="curve">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

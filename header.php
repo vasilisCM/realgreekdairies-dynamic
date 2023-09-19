@@ -19,7 +19,7 @@
               'menu' => "main-1",
               'container' => '',
               'theme_location' => "main-1",
-              'items_wrap' => '<ul id="" class="main-menu__list ">%3$s</ul>'
+              'items_wrap' => '<ul id="" class="main-menu__list">%3$s</ul>'
               )
             );
           ?>

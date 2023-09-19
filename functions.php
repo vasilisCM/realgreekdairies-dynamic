@@ -102,4 +102,7 @@ function realgreekdairies_register_scripts() {
 }
     
 add_action( 'wp_enqueue_scripts', 'realgreekdairies_register_scripts');
+
+// Remove Gutenberg editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
 ?>

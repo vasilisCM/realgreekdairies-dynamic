@@ -1,0 +1,9 @@
+     <svg>
+          <clipPath id="shape">
+            <path
+              id="milestones-shape"
+              d="M164.888,162.531H23a23,23,0,0,1-23-23V23A23,23,0,0,1,23,0H330a23,23,0,0,1,23,23v116.53a23,23,0,0,1-23,23H190L177.208,180Z"
+              fill="#9cc4ed"
+            />
+          </clipPath>
+        </svg>

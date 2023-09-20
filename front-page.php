@@ -12,33 +12,34 @@
         <div class="carousel hero__carousel">
           <div class="carousel__button carousel__button--previous"></div>
           <div class="carousel__container hero__carousel-container">
-            <div class="carousel__slides hero__slides-container">
-              <div class="carousel__slide hero__slide carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-hero-001.webp'; ?>');">
-                <div class="carousel__content boxed centered">
-                  <h3 class="hero__heading">
-                    <span class="hero__heading--large">Έμπνευσή μας</span>
-                    <span class="hero__heading--small">η αγνότητα της Ελληνικής Φύσης</span>
-                  </h3>
-                </div>
+          <div class="carousel__slides hero__slides-container">
+            <?php
+              if( have_rows('home__carousel') ): while ( have_rows('home__carousel') ) : the_row(); 
+                if( have_rows('slide') ): while ( have_rows('slide') ) : the_row();
+            ?>       
+
+              <div
+                  class="carousel__slide hero__slide carousel__slide"
+                  style="background-image: url(<?php echo esc_html(get_sub_field('image')); ?>)">
+                  <div class="carousel__content boxed centered">
+                    <h3 class="hero__heading">
+                      <span class="hero__heading--small"
+                        ><?php echo esc_html(get_sub_field('heading_1')); ?></span
+                      >
+                      <span class="hero__heading--large">
+                      <?php echo esc_html(get_sub_field('heading_2')); ?></span
+                      >
+                    </h3>
+                  </div>
               </div>
-              <div class="carousel__slide hero__slide carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-hero-002.jpg'; ?>');">
-                <div class="carousel__content boxed centered">
-                  <h3 class="hero__heading">
-                    <span class="hero__heading--small">Σημείο αναφοράς για την</span>
-                    <span class="hero__heading--large">
-                      αειφορία στη γεωργία</span>
-                  </h3>
-                </div>
-              </div>
-              <div class="carousel__slide hero__slide carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-hero-003.jpg'; ?>');">
-                <div class="carousel__content boxed centered">
-                  <h3 class="hero__heading">
-                    <span class="hero__heading--small">Βάση μας η αγνότητα της</span>
-                    <span class="hero__heading--large">ελληνικής φύσης</span>
-                  </h3>
-                </div>
-              </div>
-            </div>
+          
+            <?php
+                endwhile; endif;
+              endwhile; endif;
+            ?>
+          </div>
+ 
+
           </div>
           <div class="carousel__navigation boxed centered">
             <div class="carousel__dots carousel__dots--home"></div>
@@ -53,26 +54,28 @@
         </div>
 
         <div class="card-text card-text--center hero__card boxed centered">
-          <h1 class="heading card-text__heading">Real Greek Dairies</h1>
-          <p class="card-text__text">
-            Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να δημιουργήσει
-            ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής ποιότητας,
-            καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι να
-            ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
-            προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
-            κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
-            REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
-            περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
-            και την επιτυχία μας.
-          </p>
+          <?php 
+            $page_info = get_field('home__page_info');
+            $heading = $page_info['heading'];
+            $description = $page_info['description'];
+            $button = $page_info['button'];
+            $button_text = $page_info['button']['text'];
+            $button_link = $page_info['button']['link'];
+          ?>
 
-          <a href=""><button class="button">
-              <span>Διαβάστε περισσότερα</span>
+          <h1 class="heading card-text__heading"><?php echo esc_html($heading); ?></h1>
+          <p class="card-text__text"><?php echo esc_html($description); ?></p>
+          <a href="<?php echo esc_html($button_link); ?>">
+            <button class="button">
+              <span><?php echo esc_html($button_text); ?></span>
             </button></a>
 
+          <?php 
+          $milestones = get_field('home__milestones');
+          $milestones_description = $milestones['description'];
+          ?>
           <p class="text-medium-large bold card-text__text card-text__text--bold">
-            Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά
-            ορόσημα, που αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας:
+            <?php echo esc_html($milestones_description); ?>
           </p>
         </div>
       </section>
@@ -192,95 +195,47 @@
         </div>
       </section>
 
-      <section class="products-home">
-        <div class="products-home__card boxed-no-desktop centered">
+      <?php
+// We can't use variable here
+if( have_rows('home__products') ): while ( have_rows('home__products') ) : the_row(); 
+    if( have_rows('card') ): while ( have_rows('card') ) : the_row();       
+    ?>
+
+      <div class="products-home__card boxed-no-desktop centered">
           <div class="card-text products-home__text-container">
             <h2 class="heading">
-              <span class="card-text__heading">Real Greek Dairies</span>
-              <br><span class="card-text__subheading">Αγνή Ελληνική Πρωτεΐνη
+              <span class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></span>
+              <br /><span class="card-text__subheading"
+                ><?php echo esc_html(get_sub_field('subheading')); ?>
               </span>
             </h2>
             <p class="card-text__text">
-              Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-              δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής
-              ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι
-              να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
-              προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
-              κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
-              REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
-              περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
-              και την επιτυχία μας.
+              <?php echo esc_html(get_sub_field('text')); ?>
             </p>
-            <a href=""><button class="button">
-                <span>Διαβάστε περισσότερα</span>
-              </button></a>
+            <a href="<?php echo esc_html(get_sub_field('button')['link']); ?>"
+              ><button class="button">
+                <span><?php echo esc_html(get_sub_field('button')['text']); ?></span>
+              </button></a
+            >
           </div>
           <div class="products-home__img-container">
-            <img data-uploads="home-products-001.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-products-001.png' ); ?>" alt="" class="products-home__img">
+            <img
+              data-uploads="home-products-001.png"
+              src="<?php echo esc_html(get_sub_field('image')); ?>"
+              alt=""
+              class="products-home__img"
+            />
           </div>
-        </div>
-        <div class="products-home__card products-home__card--flipped boxed-no-desktop centered">
-          <div class="card-text card-text--right products-home__text-container">
-            <h2 class="heading">
-              <span class="card-text__heading">Real Greek Dairies</span>
-              <br><span class="card-text__subheading">Αγνή Ελληνική Πρωτεΐνη
-              </span>
-            </h2>
-            <p class="card-text__text">
-              Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-              δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής
-              ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι
-              να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
-              προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
-              κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
-              REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
-              περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
-              και την επιτυχία μας.
-            </p>
-            <a href=""><button class="button">
-                <span>Διαβάστε περισσότερα</span>
-              </button></a>
-          </div>
-          <div class="products-home__img-container">
-            <img data-uploads="home-products-002.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-products-002.png' ); ?>" alt="" class="products-home__img">
-          </div>
-        </div>
-        <div class="products-home__card boxed-no-desktop centered">
-          <div class="card-text products-home__text-container">
-            <h2 class="heading">
-              <span class="card-text__heading">Real Greek Dairies</span>
-              <br><span class="card-text__subheading">Αγνή Ελληνική Πρωτεΐνη
-              </span>
-            </h2>
-            <p class="card-text__text">
-              Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-              δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής
-              ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι
-              να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
-              προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
-              κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
-              REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
-              περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
-              και την επιτυχία μας.
-            </p>
-            <a href=""><button class="button">
-                <span>Διαβάστε περισσότερα</span>
-              </button></a>
-          </div>
-          <div class="products-home__img-container">
-            <img data-uploads="home-products-003.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-products-003.png' ); ?>" alt="" class="products-home__img">
-          </div>
-        </div>
+      </div>
+       
+  <?php
+    endwhile; endif;
+    endwhile; endif;
+  ?>
+
+
       </section>
+
 
       <section class="company-home">
         <div class="banner" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/banner-bg-001.jpg'; ?>');">

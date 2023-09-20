@@ -194,62 +194,94 @@
     wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
         </div>
       </section>
-
-      <?php
-// We can't use variable here
-if( have_rows('home__products') ): while ( have_rows('home__products') ) : the_row(); 
-    if( have_rows('card') ): while ( have_rows('card') ) : the_row();       
-    ?>
-
-      <div class="products-home__card boxed-no-desktop centered">
-          <div class="card-text products-home__text-container">
-            <h2 class="heading">
-              <span class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></span>
-              <br /><span class="card-text__subheading"
-                ><?php echo esc_html(get_sub_field('subheading')); ?>
-              </span>
-            </h2>
-            <p class="card-text__text">
-              <?php echo esc_html(get_sub_field('text')); ?>
-            </p>
-            <a href="<?php echo esc_html(get_sub_field('button')['link']); ?>"
-              ><button class="button">
-                <span><?php echo esc_html(get_sub_field('button')['text']); ?></span>
-              </button></a
-            >
+           
+      <section class="products-home">
+        <?php
+          // We can't use variables here
+          if( have_rows('home__products') ): while ( have_rows('home__products') ) : the_row(); 
+          if( have_rows('card') ): while ( have_rows('card') ) : the_row();       
+        ?>
+          <div class="products-home__card boxed-no-desktop centered">
+              <div class="card-text products-home__text-container">
+                <h2 class="heading">
+                  <span class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></span>
+                  <br /><span class="card-text__subheading"
+                    ><?php echo esc_html(get_sub_field('subheading')); ?>
+                  </span>
+                </h2>
+                <p class="card-text__text">
+                  <?php echo esc_html(get_sub_field('text')); ?>
+                </p>
+                <a href="<?php echo esc_html(get_sub_field('button')['link']); ?>"
+                  ><button class="button">
+                    <span><?php echo esc_html(get_sub_field('button')['text']); ?></span>
+                  </button></a
+                >
+              </div>
+              <div class="products-home__img-container">
+                <img
+                  data-uploads="home-products-001.png"
+                  src="<?php echo esc_html(get_sub_field('image')); ?>"
+                  alt=""
+                  class="products-home__img"
+                />
+              </div>
           </div>
-          <div class="products-home__img-container">
-            <img
-              data-uploads="home-products-001.png"
-              src="<?php echo esc_html(get_sub_field('image')); ?>"
-              alt=""
-              class="products-home__img"
-            />
-          </div>
-      </div>
-       
-  <?php
-    endwhile; endif;
-    endwhile; endif;
-  ?>
+        
+        <?php
+          endwhile; endif;
+          endwhile; endif;
+        ?>
 
 
       </section>
 
 
       <section class="company-home">
-        <div class="banner" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/banner-bg-001.jpg'; ?>');">
+
+        <?php 
+        // Banner 1
+          $company = get_field('home__company');
+          $banner_1 = $company['banner_1'];
+          $banner_1_image = $banner_1['image'];
+          $banner_1_heading = $banner_1['heading'];
+          $banner_1_text = $banner_1['text'];
+          $banner_1_button = $banner_1['button'];
+          $banner_1_button_text = $banner_1_button['text'];
+          $banner_1_button_link = $banner_1_button['link'];
+
+          // Heading
+          $heading = $company['heading']; // Variables are scoped ;)
+
+          // Subeading
+          $subheading = $company['subheading'];
+
+          // Image 1
+          $image_1 = $company['image_1'];
+
+          // Image 2
+          $image_2 = $company['image_2'];
+
+          // Banner 1
+          $company = get_field('home__company');
+          $banner_2 = $company['banner_2'];
+          $banner_2_image = $banner_2['image'];
+          $banner_2_heading = $banner_2['heading'];
+          $banner_2_text = $banner_2['text'];
+          $banner_2_button = $banner_2['button'];
+          $banner_2_button_text = $banner_2_button['text'];
+          $banner_2_button_link = $banner_2_button['link'];
+        ?>
+
+        <div class="banner" style="background-image: url('<?php echo esc_html($banner_1_image); ?>');">
           <div class="banner__container boxed centered">
             <div class="card-text banner__card">
-              <h2 class="heading card-text__heading">Ελληνικότητα</h2>
+              <h2 class="heading card-text__heading"><?php echo esc_html($banner_1_heading); ?></h2>
               <p class="card-text__text">
-                Είμαστε υπερήφανοι για την ελληνική μας καταγωγή και αξιοποιούμε
-                τα παραδοσιακά και ποιοτικά χαρακτηριστικά των ελληνικών
-                προϊόντων. Τα προϊόντα μας παράγονται από αίγειο και πρόβειο
-                γάλα, προσφέροντας μια μοναδική γευστική εμπειρία.
+              <?php echo esc_html($banner_1_text); ?>
               </p>
-              <a href=""><button class="button">
-                  <span>Διαβάστε περισσότερα</span>
+              <a href="<?php echo esc_html($banner_1_button_link); ?>"><button class="button">
+                  <span><?php echo esc_html($banner_1_button_text); ?></span>
                 </button></a>
             </div>
           </div>
@@ -259,48 +291,32 @@ if( have_rows('home__products') ): while ( have_rows('home__products') ) : the_r
           <div class="company-home__container">
             <div class="company-home__text-container centered">
               <h2 class="heading-medium-large">
-                Η παρουσία των προϊόντων REAL GREEK DAIRIES είναι δυναμική και
-                συνεχής σε πολλές χώρες, σε όλο τον κόσμο.
+                <?php echo esc_html( $heading); ?>
               </h2>
               <p>
-                Με έδρα μας την Ευρώπη, έχουμε επεκταθεί στην Κίνα και τις
-                Ηνωμένες Πολιτείες. Αυτό μας επιτρέπει να φέρνουμε τα προϊόντα
-                μας κοντά σε ακόμα περισσότερους ανθρώπους που αναζητούν υγιεινή
-                διατροφή και υψηλή ποιότητα σε προϊόντα πλούσια σε γεύση.
+                <?php echo esc_html($subheading); ?>
               </p>
             </div>
           </div>
         </div>
 
         <div class="company-home__img-container">
-          <img data-uploads="home-company-001.webp" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-company-001.webp' ); ?>" alt="" class="company-home__img centered">
+          <img data-uploads="home-company-001.webp" src="<?php echo esc_html($image_1); ?>" alt="" class="company-home__img centered">
         </div>
 
         <div class="company-home__img-container company-home__img-container--milk centered">
-          <img data-uploads="home-company-002.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-company-002.png' ); ?>" alt="" class="company-home__img">
+          <img data-uploads="home-company-002.png" src="<?php echo esc_html($image_2); ?>" alt="" class="company-home__img">
         </div>
 
-        <div class="banner" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/banner-bg-002.jpg'; ?>');">
+        <div class="banner" style="background-image: url('<?php echo esc_html($banner_2_image); ?>');">
           <div class="banner__container boxed centered">
             <div class="card-text banner__card">
-              <h2 class="heading card-text__heading">Φάρμα</h2>
+              <h2 class="heading card-text__heading"><?php echo esc_html($banner_2_heading); ?></h2>
               <p class="card-text__text">
-                Η <strong>φάρμα αιγών</strong> αναδεικνύεται ως ένα από τα
-                κεντρικά σημεία της πρωτοποριακής προσέγγισης της
-                <strong>REAL GREEK DAIRIES</strong>. Πέρα από το να αποτελεί
-                πηγή ποιοτικού και υγιεινού γάλακτος, η φάρμα διαδραματίζει έναν
-                διπλό ρόλο:
-                <strong>αυξάνει τη βιωσιμότητα της επιχείρησης και αποτελεί πρότυπο
-                  για τη νέα γενιά των παραγωγών.</strong>
+              <?php echo esc_html($banner_2_text); ?>
               </p>
-              <a href=""><button class="button">
-                  <span>Διαβάστε περισσότερα</span>
+              <a href="<?php echo esc_html($banner_2_button_link); ?>"><button class="button">
+                  <span><?php echo esc_html($banner_2_button_text); ?></span>
                 </button></a>
             </div>
           </div>

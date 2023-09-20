@@ -1,6 +1,5 @@
 
-    <?php /* Template Name: Real Greek Dairies */ ?>
-    <?php get_header(); ?> <!-- Header  -->
+       <?php get_header(); ?> <!-- Header  -->
     
 
     <!-- Main  -->

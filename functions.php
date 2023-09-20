@@ -49,14 +49,28 @@ function product_custom_post_type() {
 	register_post_type('product',
 		array(
 			'labels'      => array(
-				'name'          => __('Product', 'textdomain'),
-				'singular_name' => __('Product', 'textdomain'),
+				'name'          => __('Προϊόντα', 'textdomain'),
+				'singular_name' => __('Προϊόν', 'textdomain'),
 			),
 				'public'      => true,
                 'has_archive' => true,
                 'supports'    => array('title', 'editor', 'excerpt', 'thumbnail'), 
 		)
 	);
+
+    // Register Custom Taxonomy
+    register_taxonomy(
+        'product_category',
+        'product',
+        array(
+            'labels'      => array(
+            'name'          => __('Κατηγορίες', 'textdomain'),
+            'singular_name' => __('Κατηγορία', 'textdomain'),
+            ),
+            'hierarchical' => true,
+            'rewrite'      => array('slug' => 'product_category'),
+            )
+        );
 }
 
 // Call the function on 'init' hook

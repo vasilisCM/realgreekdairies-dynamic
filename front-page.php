@@ -73,6 +73,7 @@
           <?php 
           $milestones = get_field('home__milestones');
           $milestones_description = $milestones['description'];
+          $milestones_shape_divider = $milestones['shape_divider'];
           ?>
           <p class="text-medium-large bold card-text__text card-text__text--bold">
             <?php echo esc_html($milestones_description); ?>
@@ -188,10 +189,7 @@
         </div>
 
         <div class="milestones__shape-divider">
-          <img data-uploads="home-milk-shape-divider.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
+          <img data-uploads="home-milk-shape-divider.png" src="<?php echo $milestones_shape_divider; ?>" alt="" class="milestones__shape-divider-img">
         </div>
       </section>
            
@@ -240,7 +238,7 @@
       <section class="company-home">
 
         <?php 
-        // Banner 1
+          // Banner 1
           $company = get_field('home__company');
           $banner_1 = $company['banner_1'];
           $banner_1_image = $banner_1['image'];

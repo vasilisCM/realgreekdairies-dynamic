@@ -36,7 +36,7 @@
       <section class="single-product">
         <div class="boxed centered single-product__container">
           <div class="single-product__img-container">
-            <?php echo get_the_post_thumbnail(); ?>
+            <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="single-product__img">
           </div>
           <div class="single-product__info">
             <h2 class="heading single-product__heading">Product Title</h2>

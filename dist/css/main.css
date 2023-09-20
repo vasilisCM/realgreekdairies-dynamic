@@ -249,7 +249,6 @@ a:hover {
 
 .boxed {
   max-width: calc(1350px + 20px);
-  padding: 20px;
   padding: 0 clamp(20px, 4.0363269425vw, 40px);
 }
 @media only screen and (min-width: 1921px) {
@@ -546,6 +545,7 @@ a:hover {
   z-index: 1;
   max-width: clamp(500px, 100.9081735621vw, 1000px);
   margin-top: clamp(40px, 9.0817356206vw, 90px);
+  margin-bottom: clamp(40px, 9.0817356206vw, 90px);
 }
 @media only screen and (max-width: 1399px) {
   .hero__card {
@@ -1367,23 +1367,26 @@ a:hover {
   display: grid;
   gap: clamp(20px, 8.072653885vw, 80px);
 }
+.products__featured-img {
+  max-height: 300px;
+}
 
 .card-text--product {
   display: grid;
 }
 @media only screen and (min-width: 992px) {
-  .card-text--product {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .card-text--flipped {
+  .card-text--product:nth-child(odd) {
     grid-template-columns: 2fr 1fr;
   }
 }
 @media only screen and (min-width: 992px) {
-  .card-text--flipped .card-text__text-container {
+  .card-text--product:nth-child(odd) .card-text__text-container {
     order: -1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card-text--product {
+    grid-template-columns: 1fr 2fr;
   }
 }
 

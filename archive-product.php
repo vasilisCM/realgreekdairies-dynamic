@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <div class="card-text card-text--center hero__card boxed centered">
+        <div class="boxed centered card-text card-text--center hero__card">
           <h1 class="heading card-text__heading">Προϊόντα</h1>
           <p class="card-text__text">
             Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να δημιουργήσει
@@ -47,7 +47,7 @@
      
           <div data-archive-posts="" class="card-text card-text--product">
             <div>
-              <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+              <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" class="products__featured-img" alt="">
             </div>
             <div class="card-text__text-container">
               <h2 data-post-title="" class="card-text__heading"><?php echo get_the_title(); ?></h2>

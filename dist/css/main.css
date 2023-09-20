@@ -507,10 +507,15 @@ a:hover {
 .hero__background {
   display: flex;
   align-items: center;
-  min-height: 70dvh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  min-height: 100dvh;
+  background-position: center bottom;
+}
+@media only screen and (max-width: 991px) {
+  .hero__background {
+    min-height: 60dvh;
+  }
 }
 @media only screen and (max-width: 991px) {
   .hero__background {
@@ -596,15 +601,6 @@ a:hover {
 }
 .hero--inner {
   position: relative;
-}
-.hero--inner .hero__background {
-  min-height: 100dvh;
-  background-position: center bottom;
-}
-@media only screen and (max-width: 991px) {
-  .hero--inner .hero__background {
-    min-height: 60dvh;
-  }
 }
 .hero--inner .hero__shape-divider {
   position: absolute;
@@ -1522,6 +1518,11 @@ a:hover {
     grid-row: 4;
     grid-column: 2/3;
   }
+}
+
+.hero__background--contact {
+  min-height: 50dvh;
+  background-position: center center;
 }
 
 /*# sourceMappingURL=main.css.map */

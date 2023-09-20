@@ -7,7 +7,7 @@
     <main class="main">
       <section class="hero hero--inner">
         <div class="hero__container">
-          <?php echo get_the_post_thumbnail(); ?>
+          <div data-featured-image-url="" class="hero__background hero__background--contact" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/contact-hero.jpg'; ?>');"></div>
         </div>
 
         <div class="hero__shape-divider">
@@ -29,13 +29,13 @@
           <div class="contact-info">
             <div class="contact-info__container">
               <div class="contact-info__item">
-                <a class="contact-info__link contact-info__link--tel" href="tel:+303424993">+30 34 24 993</a>
+                <a class="text contact-info__link contact-info__link--tel" href="tel:+303424993">+30 34 24 993</a>
               </div>
               <div class="contact-info__item">
-                <a class="contact-info__link contact-info__link--email" href="mailto:info@realgreekdairies">info@realgreekdairies</a>
+                <a class="text contact-info__link contact-info__link--email" href="mailto:info@realgreekdairies">info@realgreekdairies</a>
               </div>
               <div class="contact-info__item">
-                <a class="contact-info__link contact-info__link--location" href="https://maps.google.com/?q=latitude,longitude" target="_blank">Λαμίας 1, 17778 Ταύρος, Αθήνα
+                <a class="text contact-info__link contact-info__link--location" href="https://maps.google.com/?q=latitude,longitude" target="_blank">Λαμίας 1, 17778 Ταύρος, Αθήνα
                 </a>
               </div>
             </div>

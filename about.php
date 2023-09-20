@@ -6,9 +6,8 @@
     <!-- Main  -->
     <main class="main">
       <section class="hero hero--inner">
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" alt="" class="logo header__logo">
         <div class="hero__container">
-          <?php echo get_the_post_thumbnail(); ?>
+          <div data-featured-image-url="" class="hero__background" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
         </div>
 
         <div class="hero__shape-divider">

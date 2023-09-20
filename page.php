@@ -5,7 +5,7 @@
     <main class="main">
       <section class="hero hero--inner">
         <div class="hero__container">
-          <?php echo get_the_post_thumbnail(); ?>
+          <div data-featured-image-url="" class="hero__background" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
         </div>
 
         <div class="hero__shape-divider">

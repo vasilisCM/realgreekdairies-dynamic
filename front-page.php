@@ -21,7 +21,7 @@
                   class="carousel__slide hero__slide carousel__slide"
                   style="background-image: url(<?php echo esc_html(get_sub_field('image')); ?>)">
                   <div class="carousel__content boxed centered">
-                    <h3 class="hero__heading">
+                    <h3 class="hero__heading hero__heading--home">
                       <span class="hero__heading--small"
                         ><?php echo esc_html(get_sub_field('heading_1')); ?></span
                       >

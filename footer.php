@@ -3,7 +3,7 @@
   <div class="banner-text">
     <div class="banner-text__container boxed centered">
       <div class="banner-text__img-container">
-        <img data-uploads="footer-patent.png" src="<?php echo get_template_directory_uri() . '/assets/img/footer-patent.png'; ?>" alt="" class="centered banner-text__img">
+        <img src="<?php echo get_template_directory_uri() . '/assets/img/footer-patent.png'; ?>" alt="" class="centered banner-text__img">
       </div>
       <h3 class="heading">Η Ευρεσιτεχνία της Ελληνικής Πρωτεϊνης</h3>
       <p class="text">
@@ -46,21 +46,35 @@
 
   <div class="footer__links boxed centered">
     <div class="footer__links-column">
-      <h4 class="footer__heading heading-small">Όμιλος</h4>
+      <h4 class="footer__heading heading-small">Πληροφορίες</h4>
       
         <?php
           wp_nav_menu(
             array(
-              'menu' => "footer",
+              'menu' => "footer-1",
               'container' => '',
-              'theme_location' => "footer",
-              'items_wrap' => '<ul id="" class="main-menu__list ">%3$s</ul>'
+              'theme_location' => "footer-1",
+              'items_wrap' => '<ul id="" class="footer__list">%3$s</ul>'
               )
             );
           ?>
     </div>
     <div class="footer__links-column">
-      <h4 class="footer__heading heading-small">Όμιλος</h4>
+      <h4 class="footer__heading heading-small">Προϊόντα</h4>
+      
+        <?php
+          wp_nav_menu(
+            array(
+              'menu' => "footer-2",
+              'container' => '',
+              'theme_location' => "footer-2",
+              'items_wrap' => '<ul id="" class="footer__list">%3$s</ul>'
+              )
+            );
+          ?>
+    </div>
+    <div class="footer__links-column">
+      <h4 class="footer__heading heading-small">Επικοινωνία</h4>
       <ul class="footer__list">
         <li lang="el" class="footer__item text-small">
           <a href="">Παράδοση</a>
@@ -78,31 +92,6 @@
           <a href="">Παράδοση</a>
         </li>
       </ul>
-    </div>
-    <div class="footer__links-column">
-      <h4 class="footer__heading heading-small">Όμιλος</h4>
-      <ul class="footer__list">
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__links-column">
-      <a href=""><h4 class="footer__heading heading-small">Εγκαταστάσεις</h4></a>
-      <a href=""><h4 class="footer__heading heading-small">Νέα</h4></a>
-      <a href=""><h4 class="footer__heading heading-small">Επικοινωνία</h4></a>
     </div>
   </div>
 

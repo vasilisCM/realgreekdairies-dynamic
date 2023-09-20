@@ -34,7 +34,8 @@ function realgreekdairies_menus() {
     $locations = array(
     'main-1' => "Main Menu 1",
     'main-2' => "Main Menu 2",
-    'footer' => "Footer Menu"
+    'footer-1' => "Footer Menu 1",
+    'footer-2' => "Footer Menu 2"
     );
 
     register_nav_menus($locations);

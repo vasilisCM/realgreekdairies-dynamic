@@ -18,24 +18,45 @@
         </div>
       </section>
 
+      
       <section class="page-info">
         <div class="card-text card-text--center boxed centered">
-          <h1 class="heading card-text__heading">Επικονωνήστε μαζί μας</h1>
+          <?php 
+            $page_info = get_field('page__page_info');
+            $heading = $page_info['heading'];
+            $text = $page_info['text'];
+          ?>
+          <h1 class="heading card-text__heading"><?php echo esc_html($heading); ?></h1>
           <p class="card-text__text">
-            Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να δημιουργήσει
-            ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής ποιότητας,
-            καθώς και βρεφικά γάλατα σε σκόνη.
+            <?php echo esc_html($text); ?>
           </p>
+        </div>
+      </section>
+
+      <section >
+        <div class="card-text card-text--center boxed centered">
           <div class="contact-info">
             <div class="contact-info__container">
+              <?php 
+                $contact_info = get_field('contact__contact_info');
+                $telephone = $contact_info['telephone'];
+                $telephone_text =  $telephone['text'];
+                $telephone_number =  $telephone['number'];
+                $email = $contact_info['email'];
+                $email_text = $email['text'];
+                $email_address = $email['address'];
+                $location = $contact_info['location'];
+                $location_text = $location['text'];
+                $location_pin = $location['pin'];
+              ?>
               <div class="contact-info__item">
-                <a class="text contact-info__link contact-info__link--tel" href="tel:+303424993">+30 34 24 993</a>
+                <a class="text contact-info__link contact-info__link--tel" href="tel:<?php echo esc_html($telephone_number); ?>"> <?php echo esc_html($telephone_text); ?> </a>
               </div>
               <div class="contact-info__item">
-                <a class="text contact-info__link contact-info__link--email" href="mailto:info@realgreekdairies">info@realgreekdairies</a>
+                <a class="text contact-info__link contact-info__link--email" href="mailto:<?php echo esc_html($email_address); ?>"><?php echo esc_html($email_text); ?></a>
               </div>
               <div class="contact-info__item">
-                <a class="text contact-info__link contact-info__link--location" href="https://maps.google.com/?q=latitude,longitude" target="_blank">Λαμίας 1, 17778 Ταύρος, Αθήνα
+                <a class="text contact-info__link contact-info__link--location" href="<?php echo esc_html($location_pin); ?>" target="_blank"><?php echo esc_html($location_text); ?>
                 </a>
               </div>
             </div>

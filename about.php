@@ -10,10 +10,7 @@
           <div data-featured-image-url="" 
             class="hero__background" 
             style="
-              background-image: url('
-                <?php echo get_the_post_thumbnail_url(); ?>
-                ');
-              ">
+              background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
             <h3 class="boxed centered hero__heading hero__heading--double">
               <?php 
                 $hero = get_field('about__hero');
@@ -76,157 +73,40 @@
               endwhile; endif;
             ?>
 
-
-          <!-- <div class="card-text card-text--product">
-            <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/img/singe-product-001.jpg'; ?>" class="products__featured-img" alt="">
-            </div>
-            <div class="card-text__text-container">
-              <h2 class="card-text__heading">Real Greek Dairies</h2>
-              <p class="card-text__text">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-text card-text--right card-text--product">
-            <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/img/home-products-001.png'; ?>" class="products__featured-img" alt="">
-            </div>
-            <div class="card-text__text-container">
-              <h2 class="card-text__heading">Real Greek Dairies</h2>
-              <p class="card-text__text">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-text card-text--product">
-            <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/img/home-products-001.png'; ?>" class="products__featured-img" alt="">
-            </div>
-            <div class="card-text__text-container">
-              <h2 class="card-text__heading">Real Greek Dairies</h2>
-              <p class="card-text__text">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-              <button class="button card-text__button about__button">
-                <span>Διαβάστε περισσότερα</span>
-              </button>
-              <p class="card-text__text tabs__content about__content hidden">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-text card-text--right card-text--product">
-            <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/img/home-products-001.png'; ?>" alt="" class="products__featured-img">
-            </div>
-            <div class="card-text__text-container">
-              <h2 class="card-text__heading">Real Greek Dairies</h2>
-              <p class="card-text__text">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-text card-text--product">
-            <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/img/home-products-001.png'; ?>" class="products__featured-img" alt="">
-            </div>
-            <div class="card-text__text-container">
-              <h2 class="card-text__heading">Real Greek Dairies</h2>
-              <p class="card-text__text">
-                Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να
-                δημιουργήσει ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα
-                υψηλής ποιότητας, καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή
-                μας είναι να ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό
-                διεθνή χώρο προσφέροντας προϊόντα που ανταποκρίνονται στις
-                ανάγκες όλων των κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε
-                τη σειρά προϊόντων REAL GREEK DAIRIES. Η πορεία του ομίλου
-                ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ περιλαμβάνει σημαντικά ορόσημα, που
-                αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
-              </p>
-            </div>
-          </div> -->
         </div>
       </section>
 
       <section class="company-about">
         <div class="company-about__container boxed centered">
+          <?php 
+            $certifications = get_field('about__certifications');
+            $text = $certifications['text'];
+            $heading = $certifications['heading'];
+          ?>
           <p class="text-medium-large bold card-text__text card-text__text--bold">
-              Σας ευχαριστούμε που μοιράζεστε αυτή την πορεία μαζί μας. Με τη
-              συνεχή υποστήριξή σας, συνεχίζουμε να διακρινόμαστε και να
-              εμπνεόμαστε, δημιουργώντας μια διαχρονική ιστορία γεύσεων και αξιών.
+            <?php echo esc_html($text); ?>
           </p>
-          <h3 class="company-about__heading">Οι Πιστοποιήσεις μας</h3>
+          <h3 class="company-about__heading"><?php echo esc_html($heading); ?></h3>
+        
           <div class="company-about__logos">
-            <div class="company-about__logo-container">
-              <img data-uploads="about-logo-001-fscc.webp" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'about-logo-001-fscc.webp' ); ?>" alt="" class="company-about__logo-img">
-            </div>
-            <div class="company-about__logo-container">
-              <img data-uploads="about-logo-002-hqc.webp" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'about-logo-002-hqc.webp' ); ?>" alt="" class="company-about__logo-img">
-            </div>
-            <div class="company-about__logo-container">
-              <img data-uploads="about-logo-003-ISO.webps" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'about-logo-003-ISO.webps' ); ?>" alt="" class="company-about__logo-img">
-            </div>
-            <div class="company-about__logo-container">
-              <img data-uploads="about-logo-004-haccp.webp" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'about-logo-004-haccp.webp' ); ?>" alt="" class="company-about__logo-img">
-            </div>
-          </div>
+
+            <?php
+              if( have_rows('about__certifications') ): while ( have_rows('about__certifications') ) : the_row(); 
+                if( have_rows('logo') ): while ( have_rows('logo') ) : the_row();
+            ?>       
+
+              <div class="company-about__logo-container">
+                <img 
+                src="<?php echo esc_html(get_sub_field('image')); ?>" 
+                alt="" class="company-about__logo-img">
+              </div>
+
+            <?php
+          endwhile; endif;
+        endwhile; endif;
+        ?>
+</div>
+
         </div>
       </section>
     </main>

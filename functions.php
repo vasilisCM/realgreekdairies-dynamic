@@ -112,7 +112,7 @@ function realgreekdairies_register_scripts() {
     wp_enqueue_script('realgreekdairies-bundle', get_template_directory_uri(). "/dist/js/bundle.js", array(), false, true);
 
     // Temp or WP dedicated script
-    // wp_enqueue_script('realgreekdairies-js', get_template_directory_uri() . "/dist/js/wp.js", array(), $version, true);
+    wp_enqueue_script('realgreekdairies-js', get_template_directory_uri() . "/dist/js/wp.js", array(), $version, true);
 
 }
     

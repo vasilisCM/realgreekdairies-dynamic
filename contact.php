@@ -75,7 +75,8 @@
 
           <div class="contact-form">
             <form action="" class="contact-form__form">
-              <div class="contact-form__field">
+              <?php echo do_shortcode('[contact-form-7 id="6bf6d1f" title="Contact Form"]'); ?>
+              <!-- <div class="contact-form__field">
                 <label class="contact-form__label text" lang="el" for="name">Όνομα *</label>
                 <input class="contact-form__input" lang="el" type="text" name="name" id="name" required="">
               </div>
@@ -105,7 +106,7 @@
                     <span>Υποβολή</span>
                   </button>
                 </div>
-              </div>
+              </div> -->
             </form>
           </div>
         </div>

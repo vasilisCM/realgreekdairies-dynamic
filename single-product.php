@@ -5,7 +5,9 @@
     <main class="main">
       <section class="hero">
         <div class="hero__container">
-          <div class="hero__background" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/single-product-hero.webp'; ?>');"></div>
+          <div class="hero__background" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/single-product-hero.webp'; ?>');">
+            <h1 data-post-title="" class="boxed centered hero__heading hero__heading--large"><?php echo get_the_title(); ?></h1>
+          </div>
 
           <div class="curve">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -16,13 +18,23 @@
 
         <div class="card-text card-text--center hero__card boxed centered">
           <div>
-            <h1 class="heading card-text__heading">Μητέρες κατά την κύηση</h1>
+            <div class="heading card-text__heading">Μητέρες κατά την κύηση</div>
             <!-- <br />
             <span data-post-title class="heading card-text__subheading"
               >Φέτα</span
             > -->
           </div>
-          <p data-post-content="" class="card-text__text"><?php echo the_content(); ?></p>
+          <p class="card-text__text">
+            Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να δημιουργήσει
+            ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής ποιότητας,
+            καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι να
+            ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
+            προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
+            κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
+            REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
+            περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
+            και την επιτυχία μας.
+          </p>
         </div>
 
         <div class="hero__shape-divider">
@@ -39,14 +51,8 @@
             <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="single-product__img">
           </div>
           <div class="single-product__info">
-            <h2 class="heading single-product__heading">Product Title</h2>
-            <div data-product-description="" class="single-product__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              finibus sit amet urna eu suscipit. Nulla molestie volutpat enim
-              vitae mattis. Vivamus ultricies sapien eu orci vestibulum, vel
-              dapibus sem sodales. Pellentesque rutrum quis odio eu egestas.
-              Aliquam dictum tellus lobortis, interdum urna vel, viverra orci.
-            </div>
+            <div data-post-title="" class="heading single-product__heading"><?php echo get_the_title(); ?></div>
+            <div data-post-content="" class="single-product__description"><?php echo the_content(); ?></div>
             <div tabs-buttons="" class="single-product__tabs">
               <div data-tab="1" class="text single-product__tab">Uses</div>
               <div data-tab="2" class="tabs__button text single-product__tab">

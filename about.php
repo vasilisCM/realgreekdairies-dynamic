@@ -50,7 +50,7 @@
                 <div class="card-text__text-container">
                   <h2 class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></h2>
                   <p class="card-text__text">
-                  <?php echo esc_html(get_sub_field('text')); ?>
+                    <?php echo esc_html(get_sub_field('text')); ?>
                   </p>
                     <?php
                       // Check if the ACF boolean field is true

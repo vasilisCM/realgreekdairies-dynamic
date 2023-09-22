@@ -77,19 +77,14 @@
       <h4 class="footer__heading heading-small">Επικοινωνία</h4>
       <ul class="footer__list">
         <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
+          <a class="contact-info__link contact-info__link--footer contact-info__link--tel" href="tel:+303424993">+30 34 24 993</a>
         </li>
         <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
+          <a class="contact-info__link contact-info__link--footer contact-info__link--email" href="mailto:info@realgreekdairies">info@realgreekdairies</a>
         </li>
         <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
-        </li>
-        <li lang="el" class="footer__item text-small">
-          <a href="">Παράδοση</a>
+          <a class="contact-info__link contact-info__link--footer contact-info__link--location" href="https://maps.google.com/?q=latitude,longitude" target="_blank">Λαμίας 1, 17778 Ταύρος, Αθήνα
+          </a>
         </li>
       </ul>
     </div>

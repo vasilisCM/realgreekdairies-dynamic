@@ -5,7 +5,10 @@
     <main class="main">
       <section class="hero">
         <div class="hero__container">
-          <div class="hero__background" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/single-product-hero.webp'; ?>');">
+          <?php 
+            $background_image = get_field('product__background_image');
+          ?>
+          <div class="hero__background" style="background-image: url('<?php echo esc_url($background_image); ?>');">
             <h1 data-post-title="" class="boxed centered hero__heading hero__heading--large"><?php echo get_the_title(); ?></h1>
           </div>
 
@@ -18,22 +21,15 @@
 
         <div class="card-text card-text--center hero__card boxed centered">
           <div>
-            <div class="heading card-text__heading">Μητέρες κατά την κύηση</div>
-            <!-- <br />
-            <span data-post-title class="heading card-text__subheading"
-              >Φέτα</span
-            > -->
+            <?php 
+              $page_info = get_field('page__page_info');
+              $heading = $page_info['heading'];
+              $text = $page_info['text'];
+            ?>
+            <div class="heading card-text__heading"><?php echo esc_html($heading); ?></div>
           </div>
           <p class="card-text__text">
-            Ο όμιλος ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ ιδρύθηκε το 1995 με στόχο να δημιουργήσει
-            ελληνικά γαλακτοκομικά και τυροκομικά προϊόντα υψηλής ποιότητας,
-            καθώς και βρεφικά γάλατα σε σκόνη. Αποστολή μας είναι να
-            ανταποκρινόμαστε καθημερινά στον ανταγωνιστικό διεθνή χώρο
-            προσφέροντας προϊόντα που ανταποκρίνονται στις ανάγκες όλων των
-            κατηγοριών και ηλικιών. Γι’ αυτό δημιουργήσαμε τη σειρά προϊόντων
-            REAL GREEK DAIRIES. Η πορεία του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ
-            περιλαμβάνει σημαντικά ορόσημα, που αντικατοπτρίζουν την ανάπτυξη
-            και την επιτυχία μας.
+            <?php echo esc_html($text); ?>
           </p>
         </div>
 
@@ -54,141 +50,24 @@
             <div data-post-title="" class="heading single-product__heading"><?php echo get_the_title(); ?></div>
             <div data-post-content="" class="single-product__description"><?php echo the_content(); ?></div>
             <div tabs-buttons="" class="single-product__tabs">
+              <?php 
+                $uses = get_field('product__uses');
+                $standard_product_analysis = get_field('product__standard_product_analysys');
+
+                // Disable automatic <p> tag insertion for product__standard_product_analysys
+                $standard_product_analysis_without_wpautop = wpautop($standard_product_analysis);
+                remove_filter('acf_the_content', 'wpautop');
+              ?>
               <div data-tab="1" class="text single-product__tab">Uses</div>
               <div data-tab="2" class="tabs__button text single-product__tab">
                 Standard Product Analysis
               </div>
             </div>
             <div data-tab="1" class="tabs__content hidden">
-              WHEYPRΟ is used widely in food, functional food, nutritional
-              supplements, children and baby nutrition.
+              <?php echo esc_html($uses); ?>
             </div>
             <div data-tab="2" class="tabs__content single-product__table-container hidden">
-              <table>
-                <tbody>
-                  <tr class="single-product__table-heading">
-                    <td class="single-product__table-heading-column">
-                      <strong>Chemical constitution</strong>
-                    </td>
-                    <td class="single-product__table-heading-column">&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr class="row-3 odd">
-                    <td>Total Protein (Ν x 6.38) DM</td>
-                    <td>%</td>
-                    <td>35,0</td>
-                  </tr>
-                  <tr class="row-4 even">
-                    <td>Lactose</td>
-                    <td>%</td>
-                    <td>53,0</td>
-                  </tr>
-                  <tr class="row-5 odd">
-                    <td>Fat</td>
-                    <td>%</td>
-                    <td>1,4</td>
-                  </tr>
-                  <tr class="row-6 even">
-                    <td>Ash</td>
-                    <td>%</td>
-                    <td>5,6</td>
-                  </tr>
-                  <tr class="row-7 odd">
-                    <td>Humidity</td>
-                    <td>%</td>
-                    <td>max 5,0</td>
-                  </tr>
-                  <tr class="row-8 even">
-                    <td>Calcium (Ca)</td>
-                    <td>g/Kg</td>
-                    <td>4,8</td>
-                  </tr>
-                  <tr class="row-9 odd">
-                    <td>Phosphorus (P)</td>
-                    <td>g/Kg</td>
-                    <td>4,9</td>
-                  </tr>
-                  <tr class="row-10 even">
-                    <td>Sodium (Na)</td>
-                    <td>g/Kg</td>
-                    <td>4,6</td>
-                  </tr>
-                  <tr class="row-11 odd">
-                    <td>Potassium (K)</td>
-                    <td>g/Kg</td>
-                    <td>12,3</td>
-                  </tr>
-                  <tr class="row-12 even">
-                    <td>Magnesium (Mg)</td>
-                    <td>g/Kg</td>
-                    <td>1,1</td>
-                  </tr>
-                  <tr class="row-13 odd">
-                    <td>Chlorine (Cl)</td>
-                    <td>g/Kg</td>
-                    <td>12,9</td>
-                  </tr>
-                  <tr class="single-product__table-heading">
-                    <td>
-                      <strong>Natural properties</strong>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr class="row-15 odd">
-                    <td>pH (10% solution)</td>
-                    <td>&nbsp;</td>
-                    <td>6,2</td>
-                  </tr>
-                  <tr class="row-16 even">
-                    <td>Bulk density</td>
-                    <td>g/L</td>
-                    <td>400</td>
-                  </tr>
-                  <tr class="row-17 odd">
-                    <td>Tapped Density</td>
-                    <td>g/L</td>
-                    <td>600</td>
-                  </tr>
-                  <tr class="row-18 even">
-                    <td>Solubility index</td>
-                    <td>ml</td>
-                    <td>0,2</td>
-                  </tr>
-                  <tr class="row-19 odd">
-                    <td>Purity (ADMI)</td>
-                    <td>disc</td>
-                    <td>A/B</td>
-                  </tr>
-                  <tr class="single-product__table-heading">
-                    <td>
-                      <strong>Microbiological specifications</strong>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr class="row-21 odd">
-                    <td>Total microbe load</td>
-                    <td>cfu/g</td>
-                    <td>max 50.000</td>
-                  </tr>
-                  <tr class="row-22 even">
-                    <td>Coliforms</td>
-                    <td>cfu/g</td>
-                    <td>max 10</td>
-                  </tr>
-                  <tr class="row-23 odd">
-                    <td>Yeasts &amp; Molds</td>
-                    <td>cfu/g</td>
-                    <td>max 10</td>
-                  </tr>
-                  <tr class="row-24 even">
-                    <td>Staphylococcus aureus</td>
-                    <td>cfu/g</td>
-                    <td>Not Present</td>
-                  </tr>
-                </tbody>
-              </table>
+              <?php echo $standard_product_analysis_without_wpautop; ?>
             </div>
           </div>
         </div>

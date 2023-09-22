@@ -7,27 +7,77 @@
     <main class="main">
       <section class="hero hero--inner">
         <div class="hero__container">
-          <div data-featured-image-url="" class="hero__background" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
-          <h3
-              class="boxed centered hero__heading hero__heading--double"
-            >
-              <span class="hero__heading--small">Ένας Όμιλος</span>
-              <span class="hero__heading--large">με Όραμα</span>
+          <div data-featured-image-url="" 
+            class="hero__background" 
+            style="
+              background-image: url('
+                <?php echo get_the_post_thumbnail_url(); ?>
+                ');
+              ">
+            <h3 class="boxed centered hero__heading hero__heading--double">
+              <?php 
+                $hero = get_field('about__hero');
+                $heading_1 = $hero['heading_1'];
+                $heading_2 = $hero['heading_2'];
+              ?>
+              <span class="hero__heading--small"><?php echo esc_html($heading_1); ?></span>
+              <span class="hero__heading--large"><?php echo esc_html($heading_2); ?></span>
             </h3>
           </div>
         </div>
 
         <div class="hero__shape-divider">
-          <img data-uploads="home-milk-shape-divider.png" src=" <?php echo 
-    str_replace( wp_upload_dir()['basedir'], 
-    wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
+          <img data-uploads="home-milk-shape-divider.png" 
+            src="
+              <?php echo 
+              str_replace( wp_upload_dir()['basedir'], 
+              wp_upload_dir()['baseurl'],
+              wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>
+              " 
+            alt="" class="milestones__shape-divider-img">
         </div>
       </section>
 
       <section class="products about">
         <div class="products__container boxed centered">
-          <div class="card-text card-text--product">
+
+        <?php
+              if( have_rows('about__content') ): while ( have_rows('about__content') ) : the_row(); 
+                if( have_rows('card') ): while ( have_rows('card') ) : the_row();
+            ?>       
+
+              <div class="card-text card-text--product">
+                <div>
+                  <img src="<?php echo esc_html(get_sub_field('image')); ?>" class="products__featured-img" alt="">
+                </div>
+                <div class="card-text__text-container">
+                  <h2 class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></h2>
+                  <p class="card-text__text">
+                  <?php echo esc_html(get_sub_field('text')); ?>
+                  </p>
+                    <?php
+                      // Check if the ACF boolean field is true
+                      if (get_sub_field('button')) :
+                    ?>
+                        <button class="button card-text__button about__button">
+                            <span>Διαβάστε περισσότερα</span>
+                        </button>
+                    <?php
+                    endif;
+                    ?>
+                  <p class="card-text__text tabs__content about__content hidden">
+                    <?php echo esc_html(get_sub_field('more_text')); ?>
+                  </p>
+                </div>
+              </div>
+          
+            <?php
+                endwhile; endif;
+              endwhile; endif;
+            ?>
+
+
+          <!-- <div class="card-text card-text--product">
             <div>
               <img src="<?php echo get_template_directory_uri() . '/assets/img/singe-product-001.jpg'; ?>" class="products__featured-img" alt="">
             </div>
@@ -139,13 +189,18 @@
                 αντικατοπτρίζουν την ανάπτυξη και την επιτυχία μας.
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <section class="company-about">
         <div class="company-about__container boxed centered">
-          <h3>Οι Πιστοποιήσεις μας</h3>
+          <p class="text-medium-large bold card-text__text card-text__text--bold">
+              Σας ευχαριστούμε που μοιράζεστε αυτή την πορεία μαζί μας. Με τη
+              συνεχή υποστήριξή σας, συνεχίζουμε να διακρινόμαστε και να
+              εμπνεόμαστε, δημιουργώντας μια διαχρονική ιστορία γεύσεων και αξιών.
+          </p>
+          <h3 class="company-about__heading">Οι Πιστοποιήσεις μας</h3>
           <div class="company-about__logos">
             <div class="company-about__logo-container">
               <img data-uploads="about-logo-001-fscc.webp" src=" <?php echo 

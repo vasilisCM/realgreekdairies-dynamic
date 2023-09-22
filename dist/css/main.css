@@ -1407,6 +1407,9 @@ a:hover {
   text-align: center;
   padding-top: 40px;
 }
+.company-about__heading {
+  padding: clamp(25px, 5.0454086781vw, 50px) 0 clamp(10px, 2.0181634712vw, 20px);
+}
 .company-about__logos {
   display: flex;
   gap: clamp(20px, 4.0363269425vw, 40px);

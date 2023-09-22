@@ -54,7 +54,7 @@
                 $uses = get_field('product__uses');
                 $standard_product_analysis = get_field('product__standard_product_analysys');
 
-                // Disable automatic <p> tag insertion for product__standard_product_analysys
+                // Disable WordPress adding <p> tags
                 $standard_product_analysis_without_wpautop = wpautop($standard_product_analysis);
                 remove_filter('acf_the_content', 'wpautop');
               ?>

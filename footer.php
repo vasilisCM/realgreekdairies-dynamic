@@ -114,6 +114,9 @@
 
       <!-- Copyrights -->
       <div class="footer__bottom-bar">
+        <?php 
+          $bottom_bar = get_field('footer__bottom_bar', 'option');
+        ?>
         <div class="footer__privacy-links text-medium-small">
           <a href="" class="footer__privacy-link">Όροι Χρήσης</a>
           <div class="footer__privacy-links-divider">|</div>
@@ -124,8 +127,15 @@
           <a href="" class="footer__privacy-link">Ρυθμίσεις Cookies</a>
         </div>
         <div class="text-small footer__copyrights">
-          Real Greek Dairies 2023 All Rights Reserved. Created by
-          <a href="">Concept Maniax.</a>
+        <?php 
+          $copyrights = $bottom_bar['copyrights'];
+          $company =  $copyrights['company'];
+          $text =  $copyrights['copyrights_text'];
+          $creator =  $copyrights['creator'];
+          $creator_website =  $copyrights['creator_website'];
+        ?>
+        <span><?php echo esc_html($company); ?></span> <?php echo date("Y"); ?> <span><?php echo esc_html($text); ?></span>. 
+        Created by <a target="_blank" href="<?php echo esc_html($creator_website); ?>"><?php echo esc_html($creator); ?></a>
         </div>
       </div>
 

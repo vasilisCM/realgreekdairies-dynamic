@@ -92,7 +92,7 @@
             <div class="carousel__slides">
               <div class="carousel__slide milestones__milestones boxed centered">
                 <div class="card-milestone">
-                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-001.webp'; ?>');">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-001.jpg'; ?>');">
                     <div class="card-milestone__text-container">
                       <p class="card-milestone__text text-medium-small">
                         Ίδρυση του ομίλου ΕΛΛΗΝΙΚΗ ΠΡΩΤΕΙΝΗ το 1995.
@@ -106,7 +106,7 @@
                   </div>
                 </div>
                 <div class="card-milestone">
-                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-002.webp'; ?>');">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-002.jpg'; ?>');">
                     <div class="card-milestone__text-container">
                       <p class="card-milestone__text text-medium-small">
                         Βραβείο ΚΑΘΑΡΗΣ ΤΕΧΝΟΛΟΓΙΑΣ από τον Ευρωπαίο Επίτροπο
@@ -120,7 +120,7 @@
                   </div>
                 </div>
                 <div class="card-milestone">
-                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.webp'; ?>');">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
                     <div class="card-milestone__text-container">
                       <p class="card-milestone__text text-medium-small">
                         Επέκταση της παρουσίας μας σε πολλές χώρες, Κίνα και
@@ -134,7 +134,7 @@
                   </div>
                 </div>
               </div>
-              <div class="carousel__slide milestones__milestones boxed centered">
+               <!-- <div class="carousel__slide milestones__milestones boxed centered">
                 <div class="card-milestone">
                   <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-001.webp'; ?>');">
                     <div class="card-milestone__text-container">
@@ -178,7 +178,7 @@
                     <span class="card-milestone__year text">2050</span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="carousel__navigation boxed centered">

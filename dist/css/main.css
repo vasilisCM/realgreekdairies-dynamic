@@ -636,7 +636,7 @@ a:hover {
 }
 @media only screen and (min-width: 1921px) {
   .carousel__container {
-    min-height: clamp(400px, 39.0625vw, 1000px);
+    min-height: clamp(400px, 23.4375vw, 600px);
   }
 }
 .carousel__slides {
@@ -1017,6 +1017,7 @@ a:hover {
   clip-path: url(#shape);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
   min-height: 180px;
 }

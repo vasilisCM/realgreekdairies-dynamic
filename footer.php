@@ -121,10 +121,8 @@
                 if( have_rows('privacy_links') ): while ( have_rows('privacy_links') ) : the_row();
             ?>  
 
-
           <a href="" class="footer__privacy-link"><?php echo esc_html(get_sub_field('text')) ?></a>
           <!-- <div class="footer__privacy-links-divider">|</div> -->
-        
         
 
         <?php

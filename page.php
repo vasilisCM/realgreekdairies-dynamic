@@ -7,7 +7,7 @@
         <div class="hero__container">
           <div data-featured-image-url="" class="hero__background" style="
           background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
-          ">
+          
             <h3 data-page-title="" class="boxed centered hero__heading hero__heading--large"><?php echo get_the_title(); ?></h3>
           </div>
         </div>

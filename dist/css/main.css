@@ -993,35 +993,15 @@ a:hover {
   cursor: pointer;
   max-width: 355px;
 }
-@media only screen and (min-width: 992px) {
-  .card-milestone--flipped .card-milestone__info-container {
-    margin-top: -20px;
-    clip-path: polygon(55% 10%, 100% 10%, 100% 100%, 0 100%, 0 10%, 45% 10%, 50% 0);
-  }
+.card-milestone--touch .card-milestone__pulse {
+  animation-duration: 1.5s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  border: solid 1px #00338a;
 }
-@media only screen and (min-width: 992px) {
-  .card-milestone--flipped .card-milestone__text-container {
-    clip-path: circle(0% at 50% 100%);
-  }
-}
-.card-milestone--flipped .card-milestone__text {
-  padding-top: 10%;
-  padding-bottom: clamp(18px, 2.4217961655vw, 24px);
-}
-@media only screen and (min-width: 992px) {
-  .card-milestone--flipped .card-milestone__dot {
-    order: -1;
-  }
-}
-@media only screen and (min-width: 1921px) {
-  .card-milestone--flipped .card-milestone__dot {
-    transform: translateY(80px);
-  }
-}
-@media only screen and (min-width: 992px) {
-  .card-milestone--flipped .card-milestone__year {
-    margin-top: -56px;
-  }
+.card-milestone--touch .card-milestone__text-container {
+  opacity: 1;
+  clip-path: circle(150% at 0 100%);
 }
 .card-milestone:hover .card-milestone__pulse {
   animation-duration: 1.5s;

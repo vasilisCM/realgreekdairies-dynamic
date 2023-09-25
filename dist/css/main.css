@@ -709,6 +709,9 @@ a:hover {
 .footer a {
   color: #000;
 }
+.footer a:hover {
+  color: #9cc4ed;
+}
 .footer__social {
   padding: clamp(35px, 5.6508577195vw, 56px) 0 0;
   border-bottom: solid 1px #a9a9a9;
@@ -775,15 +778,12 @@ a:hover {
   text-transform: uppercase;
 }
 .footer__list li {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 1921px) {
   .footer__list li {
     font-size: clamp(12px, 0.5142857143vw, 18px);
   }
-}
-.footer__list a:hover {
-  color: #9cc4ed;
 }
 .footer .contact-info__link {
   text-transform: none;
@@ -804,12 +804,19 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(12px, 2.4217961655vw, 24px);
 }
 @media only screen and (max-width: 991px) {
   .footer__privacy-links {
     flex-direction: column;
   }
+}
+.footer__privacy-link:after {
+  content: "|";
+  padding: 0 clamp(12px, 2.4217961655vw, 24px);
+}
+.footer__privacy-link:last-child:after {
+  content: "";
+  padding: 0;
 }
 @media only screen and (max-width: 991px) {
   .footer__privacy-links-divider {

@@ -114,26 +114,36 @@
 
       <!-- Copyrights -->
       <div class="footer__bottom-bar">
-        <?php 
-          $bottom_bar = get_field('footer__bottom_bar', 'option');
-        ?>
         <div class="footer__privacy-links text-medium-small">
-          <a href="" class="footer__privacy-link">Όροι Χρήσης</a>
-          <div class="footer__privacy-links-divider">|</div>
-          <a href="" class="footer__privacy-link">Πολιτική Απορρήτου</a>
-          <div class="footer__privacy-links-divider">|</div>
-          <a href="" class="footer__privacy-link">Πολιτική Χρήσης Cookies</a>
-          <div class="footer__privacy-links-divider">|</div>
-          <a href="" class="footer__privacy-link">Ρυθμίσεις Cookies</a>
+ 
+      <?php
+              if( have_rows('footer__bottom_bar', 'option') ): while ( have_rows('footer__bottom_bar', 'option') ) : the_row(); 
+                if( have_rows('privacy_links') ): while ( have_rows('privacy_links') ) : the_row();
+            ?>  
+
+
+          <a href="" class="footer__privacy-link"><?php echo esc_html(get_sub_field('text')) ?></a>
+          <!-- <div class="footer__privacy-links-divider">|</div> -->
+        
+        
+
+        <?php
+            endwhile; endif;
+          endwhile; endif;
+        ?>
+
         </div>
         <div class="text-small footer__copyrights">
+
         <?php 
+          $bottom_bar = get_field('footer__bottom_bar', 'option');
           $copyrights = $bottom_bar['copyrights'];
           $company =  $copyrights['company'];
           $text =  $copyrights['copyrights_text'];
           $creator =  $copyrights['creator'];
           $creator_website =  $copyrights['creator_website'];
         ?>
+
         <span><?php echo esc_html($company); ?></span> <?php echo date("Y"); ?> <span><?php echo esc_html($text); ?></span>. 
         Created by <a target="_blank" href="<?php echo esc_html($creator_website); ?>"><?php echo esc_html($creator); ?></a>
         </div>

@@ -342,7 +342,7 @@ a:hover {
   top: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
-  height: 100px;
+  height: 150px;
   z-index: -1;
   transition: all ease 400ms;
   visibility: hidden;
@@ -499,6 +499,7 @@ a:hover {
   min-width: 200px;
   position: absolute;
   visibility: hidden;
+  top: 16px;
   opacity: 0;
   padding-top: clamp(20px, 4.0363269425vw, 40px);
   left: 0;
@@ -507,6 +508,7 @@ a:hover {
 @media only screen and (min-width: 1921px) {
   .main-menu__list ul {
     min-width: clamp(200px, 35.3178607467vw, 350px);
+    top: clamp(16px, 2.4217961655vw, 24px);
   }
 }
 @media only screen and (max-width: 991px) {
@@ -968,9 +970,14 @@ a:hover {
 .card-text--right {
   text-align: right;
 }
+.card-text__img-container {
+  display: flex;
+  align-items: center;
+}
 .card-text__text-container {
   display: grid;
   gap: clamp(20px, 4.0363269425vw, 40px);
+  align-content: center;
 }
 .card-text__text--bold {
   margin-top: clamp(20px, 4.0363269425vw, 40px);
@@ -1219,6 +1226,9 @@ a:hover {
   padding-bottom: clamp(100px, 20.8333333333vw, 400px);
   background-color: #dde7f0;
 }
+.milestones svg {
+  height: 0;
+}
 .milestones__milestones {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1247,6 +1257,11 @@ a:hover {
   position: absolute;
   bottom: -10px;
   width: 100%;
+}
+@media only screen and (min-width: 1921px) {
+  .milestones__shape-divider {
+    bottom: 0px;
+  }
 }
 .milestones__shape-divider-img {
   width: 100%;
@@ -1422,11 +1437,17 @@ a:hover {
 @media only screen and (min-width: 992px) {
   .card-text--product:nth-child(even) {
     grid-template-columns: 2fr 1fr;
+    align-content: center;
   }
 }
 @media only screen and (min-width: 992px) {
   .card-text--product:nth-child(even) .card-text__text-container {
     order: -1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card-text--product:nth-child(even) .card-text__img-container {
+    justify-self: end;
   }
 }
 @media only screen and (min-width: 992px) {

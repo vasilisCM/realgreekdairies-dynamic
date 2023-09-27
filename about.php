@@ -44,7 +44,7 @@
             ?>       
 
               <div class="card-text card-text--product">
-                <div>
+                <div class="card-text__img-container">
                   <img src="<?php echo esc_html(get_sub_field('image')); ?>" class="products__featured-img" alt="">
                 </div>
                 <div class="card-text__text-container">

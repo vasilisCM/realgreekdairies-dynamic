@@ -42,7 +42,7 @@
                   while (have_rows('card')) : the_row();
           ?>
           <div class="card-text card-text--product">
-            <div>
+            <div class="card-text__img-container">
               <img src="<?php echo esc_url(get_sub_field('image')); ?>" class="products__featured-img" alt="">
             </div>
             <div class="card-text__text-container">

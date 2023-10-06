@@ -16,7 +16,7 @@
           <img data-uploads="home-milk-shape-divider.png" src=" <?php echo 
     str_replace( wp_upload_dir()['basedir'], 
     wp_upload_dir()['baseurl'],
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
+    wp_upload_dir()['basedir'] . '/2023/09/home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
         </div>
       </section>
 
@@ -29,7 +29,7 @@
           ?>
           <h1 class="heading card-text__heading"><?php echo esc_html($heading); ?></h1>
           <p class="card-text__text">
-            <?php echo esc_html($text); ?>
+            <?php echo $text; ?>
           </p>
         </div>
       </section>

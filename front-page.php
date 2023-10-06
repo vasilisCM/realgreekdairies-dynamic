@@ -90,7 +90,8 @@
           <div class="carousel__button carousel__button--previous"></div>
           <div class="carousel__container carousel__container--milestones">
             <div class="carousel__slides">
-              <div class="carousel__slide milestones__milestones boxed centered">
+            <div class="carousel__slide milestones__milestones boxed centered">
+
                 <div class="card-milestone">
                   <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-001.jpg'; ?>');">
                     <div class="card-milestone__text-container">
@@ -99,18 +100,17 @@
                       </p>
                     </div>
                   </div>
-
                   <div class="card-milestone__dot">
                     <div class="card-milestone__pulse"></div>
-                    <span class="card-milestone__year text">1996</span>
+                    <span class="card-milestone__year text">1995</span>
                   </div>
                 </div>
+
                 <div class="card-milestone">
                   <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-002.jpg'; ?>');">
                     <div class="card-milestone__text-container">
                       <p class="card-milestone__text text-medium-small">
-                        Βραβείο ΚΑΘΑΡΗΣ ΤΕΧΝΟΛΟΓΙΑΣ από τον Ευρωπαίο Επίτροπο
-                        Περιβάλλοντος.
+                        Βραβείο ΚΑΘΑΡΗΣ ΤΕΧΝΟΛΟΓΙΑΣ από τον Ευρωπαίο Επίτροπο Περιβάλλοντος ως αναγνώριση της προσφοράς μας στο περιβάλλον και την προστασία του.
                       </p>
                     </div>
                   </div>
@@ -119,12 +119,12 @@
                     <div class="card-milestone__pulse"></div>
                   </div>
                 </div>
+
                 <div class="card-milestone">
                   <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
                     <div class="card-milestone__text-container">
                       <p class="card-milestone__text text-medium-small">
-                        Επέκταση της παρουσίας μας σε πολλές χώρες, Κίνα και
-                        Ηνωμένες Πολιτείες.
+                        Ίδρυση Real Greek Brand. Έναρξη δραστηριότητας εξαγωγής τυροκομικών προϊόντων στις ΗΠΑ.
                       </p>
                     </div>
                   </div>
@@ -133,6 +133,63 @@
                     <span class="card-milestone__year text">2012</span>
                   </div>
                 </div>
+				  
+				        <div class="card-milestone">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
+                    <div class="card-milestone__text-container">
+                      <p class="card-milestone__text text-medium-small">
+                        Έναρξη δραστηριότητας διαδικτυακού καταστήματος https://realgreekprotein.gr
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-milestone__dot">
+                    <div class="card-milestone__pulse"></div>
+                    <span class="card-milestone__year text">2014</span>
+                  </div>
+                </div>
+				  
+				        <div class="card-milestone">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
+                    <div class="card-milestone__text-container">
+                      <p class="card-milestone__text text-medium-small">
+                        Είσοδος ως ιδιώτης επενδυτής στον Αγροτικό Γαλακτομικό Συνεταιρισμό Μονεμβασιάς «Πάρνων».
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-milestone__dot">
+                    <div class="card-milestone__pulse"></div>
+                    <span class="card-milestone__year text">2020</span>
+                  </div>
+                </div>
+				  
+				        <div class="card-milestone">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
+                    <div class="card-milestone__text-container">
+                      <p class="card-milestone__text text-medium-small">
+                        Εκμετάλλευση Γαλακτοβιομηχανίας Οικοφάρμας Τριπόλεως. Επενδύσεις στη καινοτομία παραγωγής τυροκομικών προϊόντων.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-milestone__dot">
+                    <div class="card-milestone__pulse"></div>
+                    <span class="card-milestone__year text">2021</span>
+                  </div>
+                </div>
+				  
+				        <div class="card-milestone">
+                  <div class="card-milestone__info-container" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/img/home-milestone-003.jpg'; ?>');">
+                    <div class="card-milestone__text-container">
+                      <p class="card-milestone__text text-medium-small">
+                        Έναρξη σταθμού συγκέντρωσης κατσικίσιου γάλακτος στην Απιδέα Λακωνίας.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-milestone__dot">
+                    <div class="card-milestone__pulse"></div>
+                    <span class="card-milestone__year text">2023</span>
+                  </div>
+                </div>
+				  
               </div>
                <!-- <div class="carousel__slide milestones__milestones boxed centered">
                 <div class="card-milestone">

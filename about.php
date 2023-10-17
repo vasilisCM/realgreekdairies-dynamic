@@ -48,7 +48,7 @@
                   <img src="<?php echo esc_html(get_sub_field('image')); ?>" class="products__featured-img" alt="">
                 </div>
                 <div class="card-text__text-container">
-                  <h2 class="card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></h2>
+                  <h2 class="heading card-text__heading"><?php echo esc_html(get_sub_field('heading')); ?></h2>
                   <p class="card-text__text">
                     <?php echo get_sub_field('text'); ?>
                   </p>

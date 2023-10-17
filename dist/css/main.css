@@ -658,7 +658,7 @@ a:hover {
 }
 @media only screen and (min-width: 1921px) {
   .carousel__dots {
-    transform: translateY(-400px);
+    transform: translateY(-100px);
   }
 }
 .carousel__dot {
@@ -670,8 +670,8 @@ a:hover {
 }
 @media only screen and (min-width: 1921px) {
   .carousel__dot {
-    width: clamp(18px, 2.7245206862vw, 27px);
-    height: clamp(18px, 2.7245206862vw, 27px);
+    width: clamp(18px, 2.2199798184vw, 22px);
+    height: clamp(18px, 2.2199798184vw, 22px);
   }
 }
 .carousel__dot--active {
@@ -981,6 +981,11 @@ a:hover {
 }
 .card-text__text--bold {
   margin-top: clamp(20px, 4.0363269425vw, 40px);
+}
+@media only screen and (min-width: 1921px) {
+  .card-text__heading {
+    line-height: 1.5;
+  }
 }
 .card-text__subheading {
   display: block;
@@ -1404,6 +1409,11 @@ a:hover {
 
 .about {
   padding: clamp(100px, 20.1816347124vw, 200px) 0;
+}
+@media only screen and (min-width: 1921px) {
+  .about {
+    padding: clamp(200px, 35.3178607467vw, 350px) 0;
+  }
 }
 
 .company-about {

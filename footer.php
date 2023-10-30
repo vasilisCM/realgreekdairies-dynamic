@@ -4,10 +4,6 @@
           <?php 
             $banner = get_field('footer__banner', 'option');
           ?>
-          <div class="banner-text__img-container">
-            <img src="<?php echo $banner['image']; ?>" alt="" class="centered banner-text__img">
-          </div>
-          <h3 class="heading"><?php echo $banner['heading']; ?></h3>
           <p class="text">
             <?php echo $banner['text']; ?>
           </p>

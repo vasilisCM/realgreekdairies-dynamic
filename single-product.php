@@ -40,38 +40,47 @@
     wp_upload_dir()['basedir'] . '/2023/09/home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
         </div>
       </section>
-
       <section class="single-product">
-        <div class="boxed centered single-product__container">
-          <div class="single-product__img-container">
-            <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="single-product__img">
+  <div class="boxed centered single-product__container">
+    <div class="single-product__img-container">
+      <img data-featured-image-url="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="single-product__img">
+    </div>
+    <div class="single-product__info">
+      <div data-post-title="" class="heading single-product__heading"><?php echo get_the_title(); ?></div>
+      <div data-post-content="" class="single-product__description"><?php echo the_content(); ?></div>
+      <div tabs-buttons="" class="single-product__tabs">
+        <?php 
+          $uses = get_field('product__uses');
+          $standard_product_analysis = get_field('product__standard_product_analysys');
+        ?>
+        <?php if (!empty($uses)) : ?>
+          <div data-tab="1" class="text single-product__tab">Uses</div>
+        <?php endif; ?>
+        <?php if (!empty($standard_product_analysis)) : ?>
+          <div data-tab="2" class="tabs__button text single-product__tab">
+            Standard Product Analysis
           </div>
-          <div class="single-product__info">
-            <div data-post-title="" class="heading single-product__heading"><?php echo get_the_title(); ?></div>
-            <div data-post-content="" class="single-product__description"><?php echo the_content(); ?></div>
-            <div tabs-buttons="" class="single-product__tabs">
-              <?php 
-                $uses = get_field('product__uses');
-                $standard_product_analysis = get_field('product__standard_product_analysys');
-
-                // Disable WordPress adding <p> tags
-                $standard_product_analysis_without_wpautop = wpautop($standard_product_analysis);
-                remove_filter('acf_the_content', 'wpautop');
-              ?>
-              <div data-tab="1" class="text single-product__tab">Uses</div>
-              <div data-tab="2" class="tabs__button text single-product__tab">
-                Standard Product Analysis
-              </div>
-            </div>
-            <div data-tab="1" class="tabs__content hidden">
-              <?php echo esc_html($uses); ?>
-            </div>
-            <div data-tab="2" class="tabs__content single-product__table-container hidden">
-              <?php echo $standard_product_analysis_without_wpautop; ?>
-            </div>
-          </div>
+        <?php endif; ?>
+      </div>
+      <?php if (!empty($uses)) : ?>
+        <div data-tab="1" class="tabs__content hidden">
+          <?php echo esc_html($uses); ?>
         </div>
-      </section>
+      <?php endif; ?>
+      <?php if (!empty($standard_product_analysis)) : ?>
+        <div data-tab="2" class="tabs__content single-product__table-container hidden">
+          <?php
+            // Disable WordPress adding <p> tags
+            $standard_product_analysis_without_wpautop = wpautop($standard_product_analysis);
+            remove_filter('acf_the_content', 'wpautop');
+            echo $standard_product_analysis_without_wpautop;
+          ?>
+        </div>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <!-- Footer  --> <?php get_footer(); ?>

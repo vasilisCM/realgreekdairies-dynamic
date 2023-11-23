@@ -46,8 +46,23 @@
             );
           ?>
 
-      <!-- Language Switcher -->
-      <div class="language-switcher">EN</div>
+<!-- Language Switcher -->
+<div class="language-switcher">
+  <?php
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if (!empty($languages)) {
+      foreach ($languages as $language) {
+        if (!$language['active']) {
+          $code = $language['language_code'];
+          $url = $language['url'];
+          $native_name = ($code === 'en') ? 'EN' : $language['native_name'];
+
+          echo '<a href="' . esc_url($url) . '" class="language-switcher__item">' . esc_html($native_name) . '</a>';
+        }
+      }
+    }
+  ?>
+</div>
     </nav>
 
     <!-- Mobile Menu Button  -->

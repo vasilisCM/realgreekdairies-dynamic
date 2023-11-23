@@ -1470,6 +1470,10 @@ a:hover {
   margin-top: clamp(70px, 12.1089808274vw, 120px);
 }
 
+.single-product {
+  display: grid;
+  row-gap: clamp(100px, 22.1997981837vw, 220px);
+}
 .single-product__container {
   display: grid;
   gap: clamp(20px, 4.0363269425vw, 40px);

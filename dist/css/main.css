@@ -465,6 +465,7 @@ a:hover {
 }
 .main-menu__list > li {
   position: relative;
+  text-wrap: nowrap;
 }
 .main-menu__list > li:hover ul {
   visibility: visible;

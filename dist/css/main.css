@@ -1656,4 +1656,8 @@ a:hover {
   background-position: center center;
 }
 
+.privacy {
+  margin-top: clamp(60px, 12.1089808274vw, 120px);
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -237,7 +237,7 @@
 
 
 
-          <a href="" class="footer__privacy-link"><?php echo esc_html(get_sub_field('text')) ?></a>
+          <a href="<?php echo esc_html(get_sub_field('link')) ?>" class="footer__privacy-link"><?php echo esc_html(get_sub_field('text')) ?></a>
 
           <!-- <div class="footer__privacy-links-divider">|</div> -->
 

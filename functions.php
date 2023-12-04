@@ -84,7 +84,7 @@ $version = wp_get_theme() -> get('Version');
 
 // Temp or WP dedicated stylesheet
 wp_enqueue_style('realgreekdairies-main', get_template_directory_uri(). "/dist/css/main.css", array(), $version, 'all');
-wp_enqueue_style('realgreekdairies-wp', get_template_directory_uri(). "/dist/css/wp.css", array(), $version, 'all');
+ wp_enqueue_style('realgreekdairies-wp', get_template_directory_uri(). "/dist/css/wp.css", array(), $version, 'all');
 
 }
 

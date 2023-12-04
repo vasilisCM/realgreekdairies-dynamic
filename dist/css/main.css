@@ -213,6 +213,10 @@ p,
   }
 }
 
+h5 {
+  font-size: clamp(14px, 1.614530777vw, 16px);
+}
+
 .button {
   font-size: clamp(14px, 1.614530777vw, 16px);
 }
@@ -239,6 +243,10 @@ li {
   background-color: transparent;
   text-decoration: none;
   list-style-type: none;
+}
+
+ol {
+  padding: 0;
 }
 
 a {

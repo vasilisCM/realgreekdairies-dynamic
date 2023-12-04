@@ -154,11 +154,13 @@ h3,
   }
 }
 
+h4,
 .heading-small {
   font-size: clamp(16px, 2.0181634712vw, 20px);
   line-height: 1.3em;
 }
 @media only screen and (min-width: 1921px) {
+  h4,
   .heading-small {
     font-size: clamp(20px, 0.8571428571vw, 30px);
   }
@@ -465,6 +467,7 @@ a:hover {
 }
 .main-menu__list > li {
   position: relative;
+  text-wrap: nowrap;
 }
 .main-menu__list > li:hover ul {
   visibility: visible;
@@ -1009,7 +1012,7 @@ a:hover {
 .card-milestone--touch .card-milestone__pulse {
   animation-duration: 1.5s;
   animation-name: pulse;
-  animation-iteration-count: infinite;
+  animation-fill-mode: forwards; /* Add this line */
   border: solid 1px #00338a;
 }
 .card-milestone--touch .card-milestone__text-container {
@@ -1019,7 +1022,7 @@ a:hover {
 .card-milestone:hover .card-milestone__pulse {
   animation-duration: 1.5s;
   animation-name: pulse;
-  animation-iteration-count: infinite;
+  animation-fill-mode: forwards; /* Add this line */
   border: solid 1px #00338a;
 }
 .card-milestone:hover .card-milestone__text-container {

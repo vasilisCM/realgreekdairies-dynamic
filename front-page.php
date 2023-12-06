@@ -24,60 +24,68 @@
 
           <div class="carousel__container hero__carousel-container">
 
-          <div class="carousel__slides hero__slides-container">
+            <div class="carousel__slides hero__slides-container">
 
-            <?php
+              <?php
 
-              if( have_rows('home__carousel') ): while ( have_rows('home__carousel') ) : the_row(); 
+                if( have_rows('home__carousel') ): while ( have_rows('home__carousel') ) : the_row(); 
 
-                if( have_rows('slide') ): while ( have_rows('slide') ) : the_row();
+                  if( have_rows('slide') ): while ( have_rows('slide') ) : the_row();
 
-            ?>       
+              ?>       
 
 
 
-              <div
+                <div
 
-                  class="carousel__slide hero__slide carousel__slide"
+                    class="carousel__slide hero__slide carousel__slide"
 
-                  style="background-image: url(<?php echo esc_html(get_sub_field('image')); ?>)">
+                    style="background-image: url(<?php echo esc_html(get_sub_field('image')); ?>)">
 
-                  <div class="carousel__content boxed centered">
+                    <div class="carousel__content boxed centered">
 
-                    <h3 class="hero__heading hero__heading--double hero-home__heading">
+                      <h3 class="hero__heading hero__heading--double hero-home__heading">
 
-                      <span class="hero__heading--small"
+                        <span class="hero__heading--small"
 
-                        ><?php echo esc_html(get_sub_field('heading_1')); ?></span
+                          ><?php echo esc_html(get_sub_field('heading_1')); ?></span
 
-                      >
+                        >
 
-                      <span class="hero__heading--large">
+                        <span class="hero__heading--large">
 
-                      <?php echo esc_html(get_sub_field('heading_2')); ?></span
+                        <?php echo esc_html(get_sub_field('heading_2')); ?></span
 
-                      >
+                        >
 
-                    </h3>
+                      </h3>
 
-                  </div>
+                    </div>
 
-              </div>
+                </div>
 
-          
+            
 
-            <?php
+              <?php
+
+                  endwhile; endif;
 
                 endwhile; endif;
 
-              endwhile; endif;
+              ?>
 
-            ?>
-
-          </div>
+            </div>
 
  
+            <div class="curve curve--home">
 
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+
+                <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+
+              </svg>
+
+            </div>
 
 
           </div>
@@ -90,17 +98,6 @@
 
           <div class="carousel__button carousel__button--next"></div>
 
-        </div>
-
-
-
-        <div class="curve curve--home">
-
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-
-            <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
-
-          </svg>
 
         </div>
 

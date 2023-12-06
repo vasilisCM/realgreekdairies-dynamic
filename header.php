@@ -134,7 +134,9 @@
 
     <!-- Mobile Menu Button  -->
 
-    <div class="hamburger" pressed="false"></div>
+    <div class="hamburger-container">
+      <div class="hamburger" pressed="false"></div>
+    </div>
 
   </div>
 

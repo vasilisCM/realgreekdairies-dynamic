@@ -352,7 +352,7 @@ a:hover {
   padding: clamp(8px, 1.2108980827vw, 12px) 0 clamp(16px, 2.7245206862vw, 27px) 0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  transition: transform ease 300ms, top ease 300ms;
+  transition: transform ease 150ms, top ease 150ms;
 }
 @media only screen and (max-width: 1280px) {
   .header {
@@ -426,7 +426,7 @@ a:hover {
   margin-top: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: opacity ease 400ms 200ms;
+  transition: opacity ease 400ms;
 }
 @media only screen and (min-width: 1921px) {
   .main-menu {
@@ -457,6 +457,8 @@ a:hover {
   .main-menu--1 {
     grid-row: 2;
     margin-top: 40px;
+    overflow-y: auto;
+    max-height: 100svh;
   }
 }
 @media only screen and (min-width: 1281px) {
@@ -658,6 +660,12 @@ a:hover {
 .hero__carousel-container, .hero__slide {
   height: clamp(500px, 78.125vw, 1000px);
   min-height: auto;
+  max-height: 100svh;
+}
+@media only screen and (min-width: 1921px) {
+  .hero__carousel-container, .hero__slide {
+    height: clamp(1000px, 78.125vw, 2000px);
+  }
 }
 .hero__slide {
   display: flex;
@@ -954,28 +962,45 @@ a:hover {
   z-index: 10;
 }
 
-.hamburger {
-  display: none;
+.hamburger-container {
   position: relative;
-  z-index: 2;
-  width: 36px;
-  height: 3px;
-  background: #00338a;
+  z-index: 1;
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-content: center;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
 }
-@media only screen and (max-width: 1280px) {
-  .hamburger {
-    display: flex;
+@media only screen and (min-width: 1281px) {
+  .hamburger-container {
+    display: none;
   }
+}
+@media only screen and (min-width: 992px) {
+  .hamburger-container:hover .hamburger {
+    width: 32px;
+  }
+  .hamburger-container:hover .hamburger:before, .hamburger-container:hover .hamburger:after {
+    width: 32px;
+  }
+}
+
+.hamburger {
+  display: flex;
+  position: relative;
+  background: #00338a;
+  z-index: 2;
+  width: clamp(30px, 3.6326942482vw, 36px);
+  height: 3px;
+  transition: all 200ms ease-in-out;
 }
 .hamburger:before, .hamburger:after {
   content: "";
   position: absolute;
-  width: 36px;
+  width: clamp(30px, 3.6326942482vw, 36px);
   height: 3px;
   background: #00338a;
-  transition: all 0.5s ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .hamburger:before {
   transform: translateY(-10px);
@@ -985,7 +1010,10 @@ a:hover {
 }
 .hamburger--pressed {
   transform: translateX(-50px);
-  background: transparent;
+  background-color: transparent;
+}
+.hamburger--pressed:hover:before {
+  transform: rotate(45deg) translate(35px, -35px);
 }
 .hamburger--pressed:before {
   transform: rotate(45deg) translate(35px, -35px);
@@ -1487,11 +1515,6 @@ a:hover {
 
 .about {
   padding: clamp(50px, 10.0908173562vw, 100px) 0;
-}
-@media only screen and (min-width: 1921px) {
-  .about {
-    padding: clamp(200px, 35.3178607467vw, 350px) 0;
-  }
 }
 
 .company-about {

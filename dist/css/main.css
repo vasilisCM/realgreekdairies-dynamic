@@ -1753,4 +1753,32 @@ a:hover {
   margin-top: clamp(60px, 12.1089808274vw, 120px);
 }
 
+.error-404 {
+  background-color: #9cc4ed;
+  color: #fff;
+  text-align: center;
+}
+.error-404 .hero__background {
+  padding-block: 100px;
+}
+.error-404__container {
+  display: grid;
+  justify-content: center;
+  gap: clamp(20px, 4.0363269425vw, 40px);
+  padding-top: clamp(60px, 12.1089808274vw, 120px);
+}
+.error-404__img-container {
+  max-width: 300px;
+}
+.error-404__text-container {
+  width: 100%;
+}
+.error-404__heading {
+  font-size: clamp(40px, 7.0635721493vw, 70px);
+  font-weight: 500;
+}
+.error-404__text {
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=main.css.map */

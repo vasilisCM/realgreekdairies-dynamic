@@ -11,7 +11,7 @@
         <div class="hero__container">
           <div class="hero__background">
             <div class="error-404__container boxed centered">
-              <div class="error-404__img-container">
+              <div class="error-404__img-container centered">
                 <img class="centered" src="<?php echo get_template_directory_uri() . '/./assets/img/guru-goat.png'; ?>" alt="" />
               </div>
               <div class="error-404__text-container">

@@ -21,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -104,24 +104,18 @@ select {
 }
 @font-face {
   font-family: "Roboto Flex";
-  src: url("../../assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf")
-    format("truetype");
+  src: url("../../assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf") format("truetype");
   font-display: block;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("../../assets/fonts//Manrope-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("../../assets/fonts//Manrope-VariableFont_wght.ttf") format("truetype");
   font-display: block;
 }
 @font-face {
   font-family: "icomoon";
   src: url("../../assets/fonts/icomoon/icomoon.eot?ot6n2i");
-  src: url("../../assets/fonts/icomoon/icomoon.eot?ot6n2i#iefix")
-      format("embedded-opentype"),
-    url("../../assets/fonts/icomoon/icomoon.ttf?ot6n2i") format("truetype"),
-    url("../../assets/fonts/icomoon/icomoon.woff?ot6n2i") format("woff"),
-    url("../../assets/fonts/icomoon/icomoon.svg?ot6n2i#icomoon") format("svg");
+  src: url("../../assets/fonts/icomoon/icomoon.eot?ot6n2i#iefix") format("embedded-opentype"), url("../../assets/fonts/icomoon/icomoon.ttf?ot6n2i") format("truetype"), url("../../assets/fonts/icomoon/icomoon.woff?ot6n2i") format("woff"), url("../../assets/fonts/icomoon/icomoon.svg?ot6n2i#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -355,8 +349,7 @@ a:hover {
   z-index: 999;
   width: 100%;
   top: clamp(22px, 4.5408678103vw, 45px);
-  padding: clamp(8px, 1.2108980827vw, 12px) 0 clamp(16px, 2.7245206862vw, 27px)
-    0;
+  padding: clamp(8px, 1.2108980827vw, 12px) 0 clamp(16px, 2.7245206862vw, 27px) 0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   transition: transform ease 150ms, top ease 150ms;
@@ -416,11 +409,7 @@ a:hover {
 }
 @media only screen and (min-width: 1281px) {
   .header__container {
-    grid-template-columns: calc(50% - clamp(140px, 20.8vw, 312px) / 2) clamp(
-        140px,
-        20.8vw,
-        312px
-      ) calc(50% - clamp(140px, 20.8vw, 312px) / 2);
+    grid-template-columns: calc(50% - clamp(140px, 20.8vw, 312px) / 2) clamp(140px, 20.8vw, 312px) calc(50% - clamp(140px, 20.8vw, 312px) / 2);
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -672,15 +661,13 @@ a:hover {
   overflow: hidden;
   width: 100%;
 }
-.hero__carousel-container,
-.hero__slide {
+.hero__carousel-container, .hero__slide {
   height: clamp(500px, 78.125vw, 1000px);
   min-height: auto;
   max-height: 100svh;
 }
 @media only screen and (min-width: 1921px) {
-  .hero__carousel-container,
-  .hero__slide {
+  .hero__carousel-container, .hero__slide {
     height: clamp(1000px, 78.125vw, 2000px);
   }
 }
@@ -833,8 +820,7 @@ a:hover {
 .footer__social-icon-container {
   height: 100%;
   width: 100%;
-  padding: 40px clamp(14px, 2.4217961655vw, 24px)
-    clamp(35px, 5.6508577195vw, 56px);
+  padding: 40px clamp(14px, 2.4217961655vw, 24px) clamp(35px, 5.6508577195vw, 56px);
   border-bottom: solid 2px transparent;
   transition: border ease 300ms;
   cursor: pointer;
@@ -894,8 +880,7 @@ a:hover {
   border-top: solid 1px #a9a9a9;
   text-align: center;
 }
-.footer__privacy-link,
-.footer__copyrights {
+.footer__privacy-link, .footer__copyrights {
   color: #000;
 }
 .footer__privacy-links {
@@ -950,8 +935,7 @@ a:hover {
 .button:hover span {
   animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
 }
-.button::before,
-.button::after {
+.button::before, .button::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1000,8 +984,7 @@ a:hover {
   .hamburger-container:hover .hamburger {
     width: 32px;
   }
-  .hamburger-container:hover .hamburger:before,
-  .hamburger-container:hover .hamburger:after {
+  .hamburger-container:hover .hamburger:before, .hamburger-container:hover .hamburger:after {
     width: 32px;
   }
 }
@@ -1015,8 +998,7 @@ a:hover {
   height: 3px;
   transition: all 200ms ease-in-out;
 }
-.hamburger:before,
-.hamburger:after {
+.hamburger:before, .hamburger:after {
   content: "";
   position: absolute;
   width: clamp(30px, 3.6326942482vw, 36px);
@@ -1193,8 +1175,14 @@ a:hover {
   background-position: center center;
   background-attachment: fixed;
 }
+@media only screen and (max-width: 991px) {
+  .banner {
+    background-position: center top;
+    background-attachment: unset;
+  }
+}
 .banner__container {
-  padding: clamp(36px, 7.2vw, 72px) 0;
+  padding: clamp(36px, 7.2vw, 72px) 20px;
   color: #00338a;
 }
 .banner__card {
@@ -1216,6 +1204,11 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px) brightness(1.2);
   border-radius: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .banner__card:before {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .banner-text {
@@ -1498,8 +1491,7 @@ a:hover {
   max-width: 1700px;
   margin-top: clamp(25px, 5.0454086781vw, 50px);
   padding: clamp(20px, 6.0544904137vw, 60px);
-  border-radius: clamp(20px, 6.0544904137vw, 60px)
-    clamp(20px, 6.0544904137vw, 60px) 0 0;
+  border-radius: clamp(20px, 6.0544904137vw, 60px) clamp(20px, 6.0544904137vw, 60px) 0 0;
   background-color: #dde7f0;
   text-align: center;
 }
@@ -1667,10 +1659,7 @@ a:hover {
   width: 100%;
   color: #fff;
 }
-.single-product__table-container
-  table
-  tr
-  td:not(.single-product__table-heading-column) {
+.single-product__table-container table tr td:not(.single-product__table-heading-column) {
   padding: 4px 8px;
   border-right: solid 1px #fff;
 }

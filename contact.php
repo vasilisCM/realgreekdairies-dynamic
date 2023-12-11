@@ -22,17 +22,7 @@
 
 
 
-        <div class="hero__shape-divider">
-
-          <img data-uploads="home-milk-shape-divider.png" src=" <?php echo 
-
-    str_replace( wp_upload_dir()['basedir'], 
-
-    wp_upload_dir()['baseurl'],
-
-    wp_upload_dir()['basedir'] . wp_upload_dir()['subdir'] . '/' . 'home-milk-shape-divider.png' ); ?>" alt="" class="milestones__shape-divider-img">
-
-        </div>
+     
 
       </section>
 

@@ -142,73 +142,13 @@
 
           <div class="contact-form">
 
-            <form action="" class="contact-form__form">
+            <div class="contact-form__form">
 
               <?php echo do_shortcode('[contact-form-7 id="6bf6d1f" title="Contact Form"]'); ?>
 
-              <!-- <div class="contact-form__field">
-
-                <label class="contact-form__label text" lang="el" for="name">Όνομα *</label>
-
-                <input class="contact-form__input" lang="el" type="text" name="name" id="name" required="">
+  
 
               </div>
-
-
-
-              <div class="contact-form__field">
-
-                <label class="contact-form__label text" lang="el" for="tel">Κινητό Τηλέφωνο *</label>
-
-                <input class="contact-form__input" type="tel" name="tel" id="tel" required="">
-
-              </div>
-
-
-
-              <div class="contact-form__field">
-
-                <label class="contact-form__label text" for="email">Email *</label>
-
-                <input class="contact-form__input" type="email" name="email" id="email" required="">
-
-              </div>
-
-
-
-              <div class="contact-form__field contact-form__field--message">
-
-                <label class="contact-form__label text" lang="el" for="message">Μήνυμα *</label>
-
-                <textarea lang="el" name="message" id="message" class="contact-form__input contact-form__input--message" required=""></textarea>
-
-              </div>
-
-              <div class="contact-form__submit-container">
-
-                <div class="contact-form__field contact-form__field--terms">
-
-                  <input class="contact-form__input contact-form__input--terms" type="checkbox" name="terms" id="terms" required="">
-
-                  <label lang="el" class="text-small contact-form__label contact-form__label--terms text" for="terms">Συμφωνώ με τους
-
-                    <a lang="el" href="">Όρους Χρήσης</a></label>
-
-                </div>
-
-                <div class="contact-form__field">
-
-                  <button class="button" type="submit" value="Submit">
-
-                    <span>Υποβολή</span>
-
-                  </button>
-
-                </div>
-
-              </div> -->
-
-            </form>
 
           </div>
 

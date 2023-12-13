@@ -9,7 +9,7 @@ const moveClasses = function (target, destination, className) {
 // Check if we are in contact page
 if (window.location.pathname.includes("contact")) {
   const formTarget = document.querySelector(".contact-form__form");
-  const formDestination = document.querySelector(".contact-form__form div");
+  const formDestination = document.querySelector(".contact-form form");
 
   moveClasses(formTarget, formDestination, "contact-form__form");
 

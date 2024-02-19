@@ -685,6 +685,11 @@ a:hover {
   bottom: 0;
   transform: translateY(30%);
 }
+@media only screen and (min-width: 1921px) {
+  .hero--inner .hero__shape-divider {
+    transform: translateY(15%);
+  }
+}
 
 .hero-product .hero__background {
   height: clamp(425px, 66.4vw, 850px);

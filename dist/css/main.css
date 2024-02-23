@@ -812,7 +812,7 @@ a:hover {
 }
 .footer__social-icons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: clamp(12px, 2.4217961655vw, 24px);
   max-width: 300px;

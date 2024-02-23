@@ -38,47 +38,36 @@
 
         </div>
 
-        <div class="footer__social-icons centered">
+  <div class="footer__social-icons centered">
+    <?php 
+    $social = get_field('footer__social', 'option');
+    ?>
 
-          <?php 
-
-            $social = get_field('footer__social', 'option');
-
-          ?>
-
-
-
-          <div class="footer__social-icon-container">
-
+    <?php if (!empty($social['facebook'])): ?>
+        <div class="footer__social-icon-container">
             <a href="<?php echo $social['facebook']; ?>" target="_blank">
-
-              <img data-uploads="ic-facebook.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-facebook.svg'; ?>" alt="" class="footer__social-icon-img centered">
-
+                <img data-uploads="ic-facebook.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-facebook.svg'; ?>" alt="" class="footer__social-icon-img centered">
             </a>
-
-          </div>
-
-          <div class="footer__social-icon-container">
-
-            <a href="<?php echo $social['instagram']; ?>" target="_blank">
-
-              <img data-uploads="ic-instagram.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-instagram.svg'; ?>" alt="" class="footer__social-icon-img centered">
-
-            </a>
-
-          </div>
-
-          <div class="footer__social-icon-container">
-
-            <a href="<?php echo $social['linkedin']; ?>" target="_blank">
-
-              <img data-uploads="ic-linkedin.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-linkedin.svg'; ?>" alt="" class="footer__social-icon-img centered">
-
-            </a>
-
-          </div>
-
         </div>
+    <?php endif; ?>
+
+    <?php if (!empty($social['instagram'])): ?>
+        <div class="footer__social-icon-container">
+            <a href="<?php echo $social['instagram']; ?>" target="_blank">
+                <img data-uploads="ic-instagram.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-instagram.svg'; ?>" alt="" class="footer__social-icon-img centered">
+            </a>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!empty($social['linkedin'])): ?>
+        <div class="footer__social-icon-container">
+            <a href="<?php echo $social['linkedin']; ?>" target="_blank">
+                <img data-uploads="ic-linkedin.svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic-linkedin.svg'; ?>" alt="" class="footer__social-icon-img centered">
+            </a>
+        </div>
+    <?php endif; ?>
+</div>
+
 
       </div>
 
